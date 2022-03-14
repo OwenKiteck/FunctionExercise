@@ -1,45 +1,46 @@
-function fozzieBear() {
+function fozzieBear(){
     console.log(`Wacka Wacka!`);
 }
 fozzieBear();
 console.log(`==================`);
 
 
-function beaker(speak) {
-    for (i = 1; i <= 4; i++) {
-        console.log(speak);
-    }
+function beaker(speak){
+    console.log(speak);
+    console.log(speak);
+    console.log(speak);
+    console.log(speak);
 }
 beaker(`Meep`);
 console.log(`==================`);
 
 
-function muppetShow(a, b) {
-    if (a === `muppet` && b === `Show`) {
-        console.log(`It's time to play the music`);
+function muppetShow(a, b){
+    if (a === `Muppet` && b === `Show`){
+        console.log(`It's time to play the music. It's time to light the lights.`);
     }
 }
 muppetShow();
-muppetShow(`muppet`, `Show`);
+muppetShow(`Muppet`, `Show`);
 console.log(`==================`);
 
 
-function kermit() {
+function kermit(){
     return `Kermit The Frog`;
 }
-kermit();
+console.log(kermit());
 console.log(`==================`);
 
 
-function muppetShowSeasons(seasons) {
-    if (seasons === 5) {
+function muppetShowSeasons(seasons){
+    if (seasons === 5){
         return true;
     } else {
         return false;
     }
 }
-muppetShowSeasons();
-muppetShowSeasons(5);
+console.log(muppetShowSeasons());
+console.log(muppetShowSeasons(5));
 console.log(`==================`);
 
 
@@ -50,6 +51,7 @@ manOrMuppet();
 console.log(`==================`);
 
 rainbowConnection = () => "Someday we'll find it. The Rainbow Connection. The lovers, the dreamers and me";
+console.log(rainbowConnection());
 console.log(`==================`);
 
 // 8.) Answer: no
@@ -60,4 +62,7 @@ const newMuppetsMovies = [
     `Muppets Most Wanted`,
 ];
 
-const newArray = newMuppetsMovies.map()
+const upperMovies = newMuppetsMovies.map(function(u){
+    return u.toUpperCase()
+});
+console.log(upperMovies);
