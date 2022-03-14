@@ -66,3 +66,59 @@ const upperMovies = newMuppetsMovies.map(function(u){
     return u.toUpperCase()
 });
 console.log(upperMovies);
+console.log(`==================`);
+
+
+// BONUS
+
+const oldMuppetMovies = [
+    "The Muppet Movie",
+    "The Muppets Take Manhattan",
+    "The Great Muppet Caper",
+    "The Muppet Christmas Carol",
+    "Muppet Treasure Island",
+    "Muppets From Space"
+];
+// const twoMovies = oldMuppetMovies.filter(a => a === "The Great Muppet Caper" || a === "Muppet Treasure Island");
+// OR
+const twoMovies = oldMuppetMovies.filter(a => a.length === 22);
+console.log(twoMovies);
+console.log(`==================`);
+
+
+const charactersOne = [
+    `Statler`,
+    `Waldorf`
+];
+const charactersTwo = [
+    `The Swedish Chief`,
+    `Animal`,
+    `Rowlf`
+];
+
+randomMuppet = (characters) => {
+    const random = Math.floor(Math.random() * characters.length)
+    console.log(characters[random]);
+}
+randomMuppet(charactersOne);
+randomMuppet(charactersTwo);
+console.log(`==================`);
+
+
+caps = (string) => {
+    let count = 0;
+    let newString = ``;
+    for (i = 0; i < string.length; i++){
+        if (string[i] === ` `) {
+            newString += ` `;
+        } else if (count % 2 === 0){
+            newString += string[i].toUpperCase();
+            count++;
+        } else {
+            newString += string[i].toLowerCase();
+            count++;
+        }
+    }
+    return newString;
+}
+console.log(caps(`Hello World`));
